@@ -11,5 +11,14 @@ int main(void)
   }
 
   /*その内容を表示*/
-  
+  for (i = 0; i < 5; i++){
+    printf("%d\n", array[i]);
+  }
+
+  /*arrayの各要素のアドレス表示*/
+  for (i = 0; i < 5; i++){
+    printf("&array[%d]...%p\n", i, &array[i]);
+  }
+
+  return 0;
 }
