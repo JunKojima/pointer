@@ -79,7 +79,7 @@ char *read_line(FILE *fp)
 
     return ret;
   }
-}
+
  /*
   *バッファを解放する。別に呼ばなくても差し支えないけれど、
   *「プログラム終了時にはmalloc()した領域は全部free()しておきたい

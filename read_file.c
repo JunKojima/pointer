@@ -16,7 +16,7 @@ char **add_line(char **text_data, char *line, int *line_alloc_num, int *line_num
   text_data[*line_num] = line;
   (*line_num)++;
 
-  return 0;
+  return text_data;
 }
 
 char **read_file(FILE *fp, int *line_num_p)
@@ -44,7 +44,7 @@ int main(void)
 
   text_data = read_file(stdin, &line_num);
 
-  for(i = 0; i < line_num; &line_num){
+  for(i = 0; i < line_num; i++){
     printf("%s\n", text_data[i]);
   }
 
