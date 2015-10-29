@@ -1,0 +1,19 @@
+#include <stdlib.h>
+#include "word_manage_p2.h"
+
+/***********************************
+ *単語管理部の終了処理を行う
+ ***********************************/
+void word_finalize(void)
+{
+  Word *temp;
+
+  /* 登録されている単語をすべてfree()する */
+  while(word_header != NULL){
+    temp = word_header;
+    word_header = word_header->next;
+
+    free(temp->name);
+    free(temp);
+  }
+}
